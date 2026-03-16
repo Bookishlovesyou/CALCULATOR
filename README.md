@@ -1,1 +1,1 @@
-A fucking simple Calculator
+This is a simple 2 operand calculator 
