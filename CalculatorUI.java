@@ -1,20 +1,6 @@
 import java.awt.*;
 import javax.swing.*;
 
-// --- Functional interface for strategy pattern ---
-@FunctionalInterface
-interface Operation {
-    double apply(double a, double b);
-}
-
-// --- Optional: custom exception for Calculator ---
-class CalculatorException extends RuntimeException {
-    public CalculatorException(String message) {
-        super(message);
-    }
-}
-
-// --- Calculator logic class (your existing one) ---
 class Calculator {
     double calculate(double a, double b, Operation operation) {
         return operation.apply(a, b);
@@ -38,7 +24,7 @@ class Calculator {
     }
 }
 
-// --- GUI class ---
+// gui
 public class CalculatorUI extends JFrame {
 
     private static CalculatorUI calcu;
@@ -48,7 +34,7 @@ public class CalculatorUI extends JFrame {
     private Operation currentOperation = null;
     private boolean startNewNumber = true;
 
-    private Calculator calc = new Calculator(); // use your Calculator class
+    private Calculator calc = new Calculator();
 
     private CalculatorUI() {
         // JFrame settings
